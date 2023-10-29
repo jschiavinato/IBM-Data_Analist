@@ -121,7 +121,7 @@ def update_output_container(selected_statistics, input_year):
 
         exp_rec = recession_data.groupby('Vehicle_Type'
                 )['Advertising_Expenditure'].sum().reset_index()
-        R_chart3 = dcc, Graph(figure=px.pie(exp_rec,
+        R_chart3 = dcc.Graph(figure=px.pie(exp_rec,
                     values='Advertising_Expenditure',
                     names='Vehicle_Type',
                     title='Total Expenditure Share by Vehicle Type during Recession Period'
@@ -143,7 +143,7 @@ def update_output_container(selected_statistics, input_year):
                 html.Div(children=R_chart2)], style={'display': 'flex'
                 }), html.Div(className='chart-item',
                 children=[html.Div(children=R_chart3),
-                html.Div(cildren=R_chart4)], style={'display': 'flex'})]
+                html.Div(children=R_chart4)], style={'display': 'flex'})]
     elif input_year and selected_statistics == 'Yearly Statistics':
 
 # TASK 2.6: Create and display graphs for Yearly Report Statistics
@@ -189,9 +189,9 @@ def update_output_container(selected_statistics, input_year):
 # TASK 2.6: Returning the graphs for displaying Yearly data
 
         return [html.Div(className='chart-item',
-                children=[html.Div(cildren=Y_chart1), html.Div(children=Y_chart2)],
+                children=[html.Div(children=Y_chart1), html.Div(children=Y_chart2)],
                 style={'display': 'flex'}),
-                html.Div(className='chart=item',
+                html.Div(className='chart-item',
                 children=[html.Div(children=Y_chart3), html.Div(children=Y_chart4)],
                 style={'display': 'flex'})]
     else:
