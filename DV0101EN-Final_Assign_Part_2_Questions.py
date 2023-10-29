@@ -57,7 +57,7 @@ app.layout = html.Div([html.H1('Automobile Sales Statistics Dashboard',
     'fontSize': 20,
     'text-align-last': 'center',
     })]), html.Div(dcc.Dropdown(id='select-year', options=[{'label': i,
-                   'value': i} for i in year_list], value='year_list[-1]'
+                   'value': i} for i in year_list], value=year_list[-1]
                    # TASK 2.3: Add a division for output display
                    )), html.Div([html.Div(id='output-container',
                                 className='chart-grid',
